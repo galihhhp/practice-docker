@@ -1,0 +1,7 @@
+services:
+  nodejs:
+    container_name: multistage-node-app
+    build:
+      context: .
+    ports:
+      - 3000:3000

@@ -1,0 +1,17 @@
+services:
+  nodejs:
+    container_name: node-app
+    build: .
+    # environment:
+    #   - PORT=3333
+    env_file:
+      - .env
+    ports:
+      - 3333:3333
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    restart: on-failure

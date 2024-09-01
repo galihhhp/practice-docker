@@ -1,0 +1,8 @@
+# Ignore all .env files anywhere in the repository
+**/.env
+
+# Ignore all secrets directories and their contents anywhere in the repository
+**/secrets/
+
+# Ignore node_modules directories anywhere in the repository
+**/node_modules/
